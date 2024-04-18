@@ -59,6 +59,7 @@ extension ASN1 {
     /// we're uninterested in.
     ///
     /// This type is not exposed to users of the API: it is only used internally for implementation of the user-level API.
+    @frozen
     @usableFromInline
     struct ParserNode {
         /// The identifier.
@@ -123,6 +124,7 @@ extension ASN1.ParserNode {
 // MARK: - Parsing
 
 extension ASN1 {
+    @frozen
     @usableFromInline
     struct ParseResult {
         @inlinable
