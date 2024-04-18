@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 
 /// An OCTET STRING is a representation of a string of octets.
-public struct ASN1OctetString: DERImplicitlyTaggable, BERImplicitlyTaggable {
+@frozen public struct ASN1OctetString: DERImplicitlyTaggable, BERImplicitlyTaggable {
 
     @inlinable
     public static var defaultIdentifier: ASN1Identifier {

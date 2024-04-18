@@ -20,7 +20,7 @@
 /// ``UTCTime`` differs from ``GeneralizedTime`` in that it only has support for a two-digit year. This
 /// means that it can only encode dates between 1950 and 2049. For dates outside that range, prefer
 /// ``GeneralizedTime``.
-public struct UTCTime: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
+@frozen public struct UTCTime: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     public static var defaultIdentifier: ASN1Identifier {
         .utcTime

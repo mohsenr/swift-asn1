@@ -115,7 +115,7 @@ extension PEMSerializable {
 }
 
 /// A PEM document is some data, and a discriminator type that is used to advertise the content.
-public struct PEMDocument: Hashable, Sendable {
+@frozen public struct PEMDocument: Hashable, Sendable {
     fileprivate static let lineLength = 64
 
     /// The PEM discriminator is in the first line of a PEM string after `BEGIN` and at the end of the string after `END` e.g.

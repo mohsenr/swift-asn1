@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 
 /// An ``ASN1Identifier`` is a representation of the abstract notion of an ASN.1 identifier.
-public struct ASN1Identifier {
+@frozen public struct ASN1Identifier {
     /// The base tag.
     public var tagNumber: UInt
 

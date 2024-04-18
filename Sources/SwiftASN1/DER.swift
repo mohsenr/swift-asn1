@@ -608,7 +608,7 @@ extension DER {
     /// An object that can serialize ASN.1 bytes.
     ///
     /// ``Serializer`` is a copy-on-write value type.
-    public struct Serializer: Sendable {
+    @frozen public struct Serializer: Sendable {
         @usableFromInline
         var _serializedBytes: [UInt8]
 

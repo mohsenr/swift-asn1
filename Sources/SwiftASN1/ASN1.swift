@@ -267,13 +267,13 @@ extension ASN1.ParseResult: Hashable {}
 
 // MARK: - LazySetOfSequence
 extension ASN1 {
-    public struct LazySetOfSequence<T>: Sequence {
+    @frozen public struct LazySetOfSequence<T>: Sequence {
         public typealias Element = Result<T, Error>
 
         @usableFromInline
         typealias WrappedSequence = LazyMapSequence<LazySequence<(ASN1NodeCollection)>.Elements, Result<T, Error>>
 
-        public struct Iterator: IteratorProtocol {
+        @frozen public struct Iterator: IteratorProtocol {
             @usableFromInline
             var wrapped: WrappedSequence.Iterator
 
@@ -310,7 +310,7 @@ extension ASN1 {
 /// It allows us to lazily construct the child nodes, potentially skipping over them when we don't care about them.
 ///
 /// This type cannot be constructed directly, and is instead provided by helper functions such as ``DER/sequence(of:identifier:rootNode:)``.
-public struct ASN1NodeCollection {
+@frozen public struct ASN1NodeCollection {
     @usableFromInline var _nodes: ArraySlice<ASN1.ParserNode>
 
     @usableFromInline var _depth: Int
@@ -333,7 +333,7 @@ extension ASN1NodeCollection: Sendable {}
 
 extension ASN1NodeCollection: Sequence {
     /// An iterator of ASN.1 nodes that are children of a specific constructed node.
-    public struct Iterator: IteratorProtocol {
+    @frozen public struct Iterator: IteratorProtocol {
         @usableFromInline
         var _nodes: ArraySlice<ASN1.ParserNode>
 
@@ -387,7 +387,7 @@ extension ASN1NodeCollection: Sequence {
 ///
 /// In this way, ASN.1 objects tend to form a "tree", where each object is represented by a single top-level constructed
 /// node that contains other objects and primitives, eventually reaching the bottom which is made up of primitive objects.
-public struct ASN1Node: Hashable, Sendable {
+@frozen public struct ASN1Node: Hashable, Sendable {
     /// The tag for this ASN.1 node.
     public var identifier: ASN1Identifier
 

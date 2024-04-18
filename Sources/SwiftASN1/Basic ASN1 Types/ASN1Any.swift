@@ -19,7 +19,7 @@
 ///
 /// The only things users can do with ASN.1 ANYs is to try to decode them as something else,
 /// to create them from something else, or to serialize them.
-public struct ASN1Any: DERParseable, BERParseable, DERSerializable, BERSerializable, Hashable, Sendable {
+@frozen public struct ASN1Any: DERParseable, BERParseable, DERSerializable, BERSerializable, Hashable, Sendable {
     @usableFromInline
     var _serializedBytes: ArraySlice<UInt8>
 

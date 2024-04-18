@@ -19,7 +19,7 @@
 /// UTC time zone.
 ///
 /// In BER format, seconds may be omitted, and timezone offsets can be present.
-public struct GeneralizedTime: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
+@frozen public struct GeneralizedTime: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     public static var defaultIdentifier: ASN1Identifier {
         .generalizedTime

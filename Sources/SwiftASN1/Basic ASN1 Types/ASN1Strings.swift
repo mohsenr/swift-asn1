@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 
 /// A UTF8String represents a string made up of UTF-8 bytes.
-public struct ASN1UTF8String: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
+@frozen public struct ASN1UTF8String: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
     ExpressibleByStringLiteral
 {
     @inlinable
@@ -66,7 +66,7 @@ public struct ASN1UTF8String: DERImplicitlyTaggable, BERImplicitlyTaggable, Hash
 /// TeletexString is an uncommon ASN.1 string type.
 ///
 /// This module represents a TeletexString as an opaque sequence of bytes.
-public struct ASN1TeletexString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
+@frozen public struct ASN1TeletexString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
     ExpressibleByStringLiteral
 {
     @inlinable
@@ -117,7 +117,7 @@ public struct ASN1TeletexString: DERImplicitlyTaggable, BERImplicitlyTaggable, H
 ///
 /// PrintableString is deprecated for most use-cases and generally ``ASN1UTF8String`` should be
 /// preferred.
-public struct ASN1PrintableString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
+@frozen public struct ASN1PrintableString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
     ExpressibleByStringLiteral
 {
     @inlinable
@@ -208,7 +208,7 @@ public struct ASN1PrintableString: DERImplicitlyTaggable, BERImplicitlyTaggable,
 /// UniversalString is an uncommon ASN.1 string type.
 ///
 /// This module represents a UniversalString as an opaque sequence of bytes.
-public struct ASN1UniversalString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
+@frozen public struct ASN1UniversalString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
     ExpressibleByStringLiteral
 {
     @inlinable
@@ -255,7 +255,7 @@ public struct ASN1UniversalString: DERImplicitlyTaggable, BERImplicitlyTaggable,
 /// BMPString is an uncommon ASN.1 string type.
 ///
 /// This module represents a BMPString as an opaque sequence of bytes.
-public struct ASN1BMPString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
+@frozen public struct ASN1BMPString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
     ExpressibleByStringLiteral
 {
     @inlinable
@@ -306,7 +306,7 @@ public struct ASN1BMPString: DERImplicitlyTaggable, BERImplicitlyTaggable, Hasha
 ///
 /// IA5String is deprecated for most use-cases and generally ``ASN1UTF8String`` should be
 /// preferred.
-public struct ASN1IA5String: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
+@frozen public struct ASN1IA5String: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable,
     ExpressibleByStringLiteral
 {
     @inlinable

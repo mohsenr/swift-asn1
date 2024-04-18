@@ -19,7 +19,7 @@
 ///
 /// In the case of a bitset, DER has additional requirements as to how to represent the object. This type does not
 /// enforce those additional rules: users are expected to implement that validation themselves.
-public struct ASN1BitString: DERImplicitlyTaggable, BERImplicitlyTaggable {
+@frozen public struct ASN1BitString: DERImplicitlyTaggable, BERImplicitlyTaggable {
 
     /// The default identifier for this type.
     ///

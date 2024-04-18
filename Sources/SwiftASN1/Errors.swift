@@ -218,6 +218,7 @@ extension ASN1Error {
 }
 
 extension ASN1Error {
+    
     final class Backing: Hashable, Sendable {
         let code: ASN1Error.ErrorCode
 

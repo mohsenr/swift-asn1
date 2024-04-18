@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 
 /// An ASN1 NULL represents nothing.
-public struct ASN1Null: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
+@frozen public struct ASN1Null: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     public static var defaultIdentifier: ASN1Identifier {
         .null
